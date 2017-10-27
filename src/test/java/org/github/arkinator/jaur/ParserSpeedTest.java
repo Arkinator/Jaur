@@ -9,11 +9,13 @@ import com.jsoniter.JsonIterator;
 import org.apache.commons.io.FileUtils;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 
 import java.io.IOException;
 
+@Ignore("Just a benchmark")
 @BenchmarkOptions(benchmarkRounds = 100, warmupRounds = 10, callgc = false, clock = Clock.REAL_TIME, concurrency = 1)
 public class ParserSpeedTest {
     private JSONParser parser = new JSONParser();
